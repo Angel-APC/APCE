@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APC Engineering</title>
+    <link rel="icon" href="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/c0c613f4-4d4a-4016-b406-203327e4a11b/div63fh-bd61cbe7-a553-4c31-9e36-63338e2d39be.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2MwYzYxM2Y0LTRkNGEtNDAxNi1iNDA2LTIwMzMyN2U0YTExYlwvZGl2NjNmaC1iZDYxY2JlNy1hNTUzLTRjMzEtOWUzNi02MzMzOGUyZDM5YmUucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.f3Ynrqk8Ahdt-Ku8ZHJMUYUU-_eb4SC9cc0Aq5mQnpA" type="image/png">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+
+    <div class="navbar">
+        <img src="img/Iconos/Icono_APC.png" alt="Logo" class="logo">
+        
+        <div class="nav-and-social">
+            <div class="nav-buttons">
+                
+                <a href="index.html">
+                <button>Inicio</button>
+                </a>
+
+                <a href="products.html">
+                <button>Productos</button>
+                </a>
+                
+                <a href="about.html">
+                <button>Nosotros</button>
+            </a>
+            </div>
+            <div class="social-buttons">
+                <a href="https://www.facebook.com/apcengin/" target="_blank" class="social-icon">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://www.instagram.com/apce.mx/" target="_blank" class="social-icon">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://api.whatsapp.com/send/?phone=%2B5218182743299&text&type=phone_number&app_absent=0" target="_blank" class="social-icon">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="background-image">
+        <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/c0c613f4-4d4a-4016-b406-203327e4a11b/div54ws-de6dc18e-124c-42fb-b9f8-625087dd6906.png/v1/fill/w_1182,h_676/background_by_ilshibbali_div54ws-pre.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NzMyIiwicGF0aCI6IlwvZlwvYzBjNjEzZjQtNGQ0YS00MDE2LWI0MDYtMjAzMzI3ZTRhMTFiXC9kaXY1NHdzLWRlNmRjMThlLTEyNGMtNDJmYi1iOWY4LTYyNTA4N2RkNjkwNi5wbmciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.V_DEaOZ3t0w-ZAEziCTPusJvvAJwhD8W5Oo_qrzY6r4" alt="Fondo" class="full-background">
+        <div class="center-content">
+            <img src="img/Iconos/PETRO_APC.png" alt="Logo Centro" class="center-logo">
+            <p class="text">SOLUCIONES  EN LUBRICACIÓN</p>
+            <a href="about.html">
+                <button class="discover-btn">MAS INFORMACION</button>
+            </a>
+        </div>
+     
+    </div>
+    
+
+    <div class="container-fluid py-5">
+        <div class="row justify-content-center align-items-center">
+            <!-- Control izquierdo -->
+            <div class="col-auto d-flex align-items-center">
+                <button class="carousel-control-custom" type="button" data-bs-target="#cardCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+            </div>
+            
+            <!-- Carrusel -->
+            <div class="col-md-8">
+                
+                <center><p class="category-text">CONTAMOS CON PRODUCTOS PARA DIFERENTES TIPOS DE INDUSTRIAS</p></center>
+                <div class="text-center mb-4">
+                    <i  class="fas fa-chevron-down scroll-arrow"></i>
+                </div>
+                
+                
+                <script>
+                    document.querySelector('.scroll-arrow').addEventListener('click', function() {
+                        document.querySelector('#cardCarousel').scrollIntoView({ 
+                            behavior: 'smooth'
+                        });
+                    });
+                    </script>
+
+
+                <div id="cardCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <!-- Primera fila de cards -->
+                        <div class="carousel-item active">
+                            <div class="row justify-content-center">
+                                <div class="col-md-3">
+                                    <div class="card card-hover">
+                                        <div class="card-icon">
+                                            <img src="img/Iconos/ICO_TRUCK.png" alt="Truck" class="icon-img">
+                                            <div class="line-gray"></div>
+                                        </div>
+                                        <div class="card-body">
+                                            <p class="card-text">TRANSPORTE PESADO</p>
+                                        </div>
+                                        <div class="line-red"></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="card card-hover">
+                                        <div class="card-icon">
+                                            <img src="img/Iconos/ICO_PL.png" alt="PL" class="icon-img">
+                                            <div class="line-gray"></div>
+                                        </div>
+                                        <div class="card-body">
+                                            <p class="card-text">INYECCION DE PLÁSTICOS</p>
+                                        </div>
+                                        <div class="line-red"></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="card card-hover">
+                                        <div class="card-icon">
+                                            <img src="img/Iconos/ICO_MANU.png" alt="Manufactura" class="icon-img">
+                                            <div class="line-gray"></div>
+                                        </div>
+                                        <div class="card-body">
+                                            <p class="card-text">MANUFACTURA</p>
+                                        </div>
+                                        <div class="line-red"></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="card card-hover">
+                                        <div class="card-icon">
+                                            <img src="img/Iconos/ICO_MIN.png" alt="Minería" class="icon-img">
+                                            <div class="line-gray"></div>
+                                        </div>
+                                        <div class="card-body">
+                                            <p class="card-text">MINERÍA</p>
+                                        </div>
+                                        <div class="line-red"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Segunda fila de cards -->
+                        <div class="carousel-item">
+                            <div class="row justify-content-center">
+                                <div class="col-md-3">
+                                    <div class="card card-hover">
+                                        <div class="card-icon">
+                                            <img src="img/Iconos/ICO_ENE.png" alt="Energía" class="icon-img">
+                                            <div class="line-gray"></div>
+                                        </div>
+                                        <div class="card-body">
+                                            <p class="card-text">ENERGÍAS</p>
+                                        </div>
+                                        <div class="line-red"></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="card card-hover">
+                                        <div class="card-icon">
+                                            <img src="img/Iconos/ICO_CONS.png" alt="Construcción" class="icon-img">
+                                            <div class="line-gray"></div>
+                                        </div>
+                                        <div class="card-body">
+                                            <p class="card-text">CONSTRUCCIÓN</p>
+                                        </div>
+                                        <div class="line-red"></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="card card-hover">
+                                        <div class="card-icon">
+                                            <img src="img/Iconos/ICO_ALI.png" alt="Alimentos" class="icon-img">
+                                            <div class="line-gray"></div>
+                                        </div>
+                                        <div class="card-body">
+                                            <p class="card-text">GRADO ALIMENTICIO</p>
+                                        </div>
+                                        <div class="line-red"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Control derecho -->
+            <div class="col-auto d-flex align-items-center">
+                <button class="carousel-control-custom" type="button" data-bs-target="#cardCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+<!-- Sección con imagen de fondo -->
+<div class="clients-section" style="background: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/c0c613f4-4d4a-4016-b406-203327e4a11b/div54ws-f5d30cc0-122c-4542-8d58-b0940e7561ec.png/v1/fill/w_1036,h_586,q_80,strp/CLIENT_BG.png-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NTg2IiwicGF0aCI6IlwvZlwvYzBjNjEzZjQtNGQ0YS00MDE2LWI0MDYtMjAzMzI3ZTRhMTFiXC9kaXY1NHdzLWY1ZDMwY2MwLTEyMmMtNDU0Mi04ZDU4LWIwOTQwZTc1NjFlYy5wbmciLCJ3aWR0aCI6Ijw9MTAzNiJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.3QVWo_nY7Z2d1WUEPwwEB5Vo58XC0hx4mO2HqaCMwoU') no-repeat center center; background-size: cover; padding: 60px 0; color: white; text-align: center; height: 450px;">
+    <div class="container">
+        <!-- Texto principal -->
+        
+        <h2 style="font-size: 2.5rem; font-weight: bold; margin-bottom: 40px;">ALGUNOS DE NUESTROS CLIENTES</h2>
+        
+        <!-- Logos de clientes en una sola fila -->
+        <div class="row justify-content-center align-items-center">
+            <div class="col-md-2">
+                <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/c0c613f4-4d4a-4016-b406-203327e4a11b/div5e2k-094a800e-8269-4b1a-9107-c2982911336f.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2MwYzYxM2Y0LTRkNGEtNDAxNi1iNDA2LTIwMzMyN2U0YTExYlwvZGl2NWUyay0wOTRhODAwZS04MjY5LTRiMWEtOTEwNy1jMjk4MjkxMTMzNmYucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.ji5fgBUJJKbz61IB6FQF8zkAHsOBnIQJl1ZkBMugCwg" alt="Cliente 1" class="img-fluid">
+            </div>
+            <div class="col-md-2">
+                <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/c0c613f4-4d4a-4016-b406-203327e4a11b/div5e2k-c523efe9-75e9-4d6d-93aa-4bd9027b2c83.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2MwYzYxM2Y0LTRkNGEtNDAxNi1iNDA2LTIwMzMyN2U0YTExYlwvZGl2NWUyay1jNTIzZWZlOS03NWU5LTRkNmQtOTNhYS00YmQ5MDI3YjJjODMucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.UJE_WXwX7jf74sywQczMYkPxcXOl3zNraJP9BQ6KxXg" alt="Cliente 2" class="img-fluid">
+            </div>
+            <div class="col-md-2">
+                <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/c0c613f4-4d4a-4016-b406-203327e4a11b/div5e2k-808e5586-4145-4c36-b637-43f39ae2279d.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2MwYzYxM2Y0LTRkNGEtNDAxNi1iNDA2LTIwMzMyN2U0YTExYlwvZGl2NWUyay04MDhlNTU4Ni00MTQ1LTRjMzYtYjYzNy00M2YzOWFlMjI3OWQucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.3ExyD1Y_yET6GBvVQNA6ytl_-mOm_lFr12T8dtUBBfU" alt="Cliente 3" class="img-fluid">
+            </div>
+            <div class="col-md-2">
+                <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/c0c613f4-4d4a-4016-b406-203327e4a11b/div5e2k-76717a37-31e2-4eff-b406-35e0c6c01de1.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2MwYzYxM2Y0LTRkNGEtNDAxNi1iNDA2LTIwMzMyN2U0YTExYlwvZGl2NWUyay03NjcxN2EzNy0zMWUyLTRlZmYtYjQwNi0zNWUwYzZjMDFkZTEucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.Jo2s9P9jHKNfTNmRpagZaMQZUu7PRARO2yY1i2ZPzkY" alt="Cliente 4" class="img-fluid">
+            </div>
+            <div class="col-md-2">
+                <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/c0c613f4-4d4a-4016-b406-203327e4a11b/div5e2k-70502634-10da-48e7-b9a2-42fa2399d593.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2MwYzYxM2Y0LTRkNGEtNDAxNi1iNDA2LTIwMzMyN2U0YTExYlwvZGl2NWUyay03MDUwMjYzNC0xMGRhLTQ4ZTctYjlhMi00MmZhMjM5OWQ1OTMucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.zVODdDvGThf-SkWBUdSB1PjtypyPErXI2IjqxrD4xmQ" alt="Cliente 5" class="img-fluid">
+            </div>
+        </div>
+    </div>
+</div>
+        
+
+
+    <!-- Línea divisoria -->
+    <hr class="divider">
+
+    <!-- Contenedor de contacto -->
+    <div class="contact-container container-fluid py-5">
+        <div class="row">
+            
+            <div class="col-md-6 contact-info">
+                <h2>CONTÁCTANOS</h2>
+                <br>
+                <p><i class="fas fa-map-marker-alt" style="color: white;"></i> Estamos ubicados en</p>
+                <p>C. Mutualismo 691-Norte, Veteranos, 67483 Cadereyta Jiménez, N.L.</p>
+                <br>
+                <p><i class="fas fa-phone-alt" style="color: white;"></i> Llámanos</p>
+                <p>+52 1 81 8274 3299</p>
+                <br>
+                <p><i class="fas fa-envelope" style="color: white;"></i> Correo:</p>
+                <p>ventas@apce.mx  <br>cadereyta@apce.mx</p>
+                <br>
+
+            </div>
+           <!-- Sript para que el formulario funcione -->
+           <script>
+                document.querySelector('form').addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    const formData = new FormData(this);
+                    
+                    fetch('php/contacto.php', {
+                        method: 'POST',
+                        body: formData
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.success) {
+                            // Ocultar formulario
+                            this.style.display = 'none';
+                            // Mostrar mensaje de éxito
+                            document.getElementById('successMessage').style.display = 'block';
+                        }
+                    })
+                    .catch(error => console.error('Error:', error));
+                });
+                      </script>
+
+                      
+            <!-- Formulario de contacto -->
+            <div class="col-md-6 contact-form">
+                <form id="contact-form">
+                    <label for="name" class="form-camp">Nombre <span style="color: #B11226;">*</span></label>
+                    <input type="text" id="name" name="name" required placeholder="Introducir tu nombre">
+                    
+                    <label for="email" class="form-camp">Correo electrónico <span style="color: #B11226;">*</span></label>
+                    <input type="email" id="email" name="email" required placeholder="example@mail.com">
+                    
+                    <label for="message" class="form-camp">Mensaje <span style="color: #B11226;">*</span></label>
+                    <textarea id="message" name="message" rows="4" required placeholder="Escribe aquí tu mensaje" style="resize: none;"></textarea>
+                    
+                    <button type="submit">Enviar mensaje</button>
+                </form>
+                
+                <div id="successMessage" class="success-container">
+                    <i class="fas fa-check-circle success-icon"></i>
+                    <p class="success-message">Mensaje enviado correctamente</p>
+                </div>
+
+        </div>     
+            
+        <style>
+.success-container {
+    display: none;
+    text-align: center;
+    padding: 2rem;
+}
+
+.success-container.show {
+    display: block;
+}
+
+.success-icon {
+    color: #4CAF50;
+    font-size: 48px;
+    margin-bottom: 1rem;
+}
+
+.success-message {
+    color: black;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+</style>
+
+    <br> 
+    <br>
+    </div>
+</div>
+    <footer style="background-color: #0a0f14; color: white; padding: 30px 0;">
+        <div class="container text-center">
+            <!-- Botones centrados -->
+            <div class="footer-buttons mb-4">
+                <button class="footer-btn">Inicio</button>
+                <button class="footer-btn">Productos</button>
+                <a href="about.html">
+                <button class="footer-btn">Nosotros</button>
+                </a>
+            </div>
+    
+            <!-- Iconos de redes sociales -->
+            <div class="social-icons mb-3">
+                <a href="https://www.facebook.com/apcengin/" target="_blank" class="social-icon mx-2">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://www.instagram.com/apce.mx/" target="_blank" class="social-icon mx-2">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://api.whatsapp.com/send/?phone=%2B5218182743299&text&type=phone_number&app_absent=0" target="_blank" class="social-icon mx-2">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
+    
+            <!-- Texto de derechos de autor -->
+            <div class="footer-text mt-3">
+                <p>© 2024 APC Engineering - Petro Canada Mexico.Powered by APC Engineering - Petro Canada Mexico.</p>
+                
+            </div>
+        </div>
+
+        
+
+    </footer>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+ 
+    <script>
+        // Detectar dispositivos móviles
+        if (/Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+          window.location.href = "index_phone.html"; // Redirigir a la versión móvil
+        }
+      </script>
+
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+      emailjs.init("VQcLe4VNYlN6XDEYO"); 
+    </script>
+      
+<script>
+document.getElementById('contact-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    // Your existing email sending code
+    emailjs.sendForm('service_1ppcvyt', 'template_wxdclid', this, 'VQcLe4VNYlN6XDEYO')
+        .then(function(response) {
+            // Hide the form
+            document.getElementById('contact-form').style.display = 'none';
+            // Show success message
+            document.getElementById('successMessage').classList.add('show');
+        }, function(error) {
+            console.log('Error:', error);
+            alert('Hubo un error al enviar el mensaje. Intenta de nuevo.');
+        });
+});
+
+</script>
+
+
+
+</body>
+</html>

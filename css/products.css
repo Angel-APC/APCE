@@ -1,0 +1,180 @@
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Asegura que se centre verticalmente también */
+    margin: 0 auto; /* Centra el contenido */
+    padding: 20px; /* Añadir algo de espacio alrededor */
+    border-right: 3px solid #343a40; /* Borde derecho */
+    width: 100%; /* Asegura que ocupe todo el ancho disponible */
+    max-width: 1200px; /* Ajusta el máximo ancho del contenedor */
+}
+
+.card-product {
+    width: 90%; /* Ajusta el tamaño de los cards */
+    max-width: 1000px; /* Limita el tamaño máximo */
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 30px;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-bottom: 20px; /* Espacio entre los cards */
+    height:300px;
+}
+
+/* Asegura que los cards no se desborden */
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 20px;
+    width: 100%;
+    max-width: 1200px;
+    border-right: none; /* Elimina el borde derecho */
+}
+
+
+
+
+@media (max-width: 768px) {
+    .card-product {
+        width: 80%; /* Aumenta el tamaño en pantallas pequeñas */
+    }
+}
+
+body {
+    margin: 0;
+    font-family: "Kanit-Italic", sans-serif;
+    padding-top: 100px;
+}
+
+.search-container {
+    position: fixed;
+    top: 100px;
+    height: auto;
+    width: 108%;
+    background: white;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    z-index: 900;
+}
+
+.search-bar {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    gap: 10px;
+}
+
+.search-input {
+    flex: 1;
+    padding: 12px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.search-btn {
+    padding: 12px 24px;
+    background: #1c82f7;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.sidebar {
+    width: 280px;
+    background: #f8f9fa;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    height: calc(100vh - 100px);
+    position: fixed;
+    top: 100px;
+    overflow-y: auto;
+}
+
+.main-content {
+    margin-left: 280px;
+    margin-top: 80px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.product-grid {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+
+.card-product {
+   
+    
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-top: -90px !important; /* Mueve el card más arriba */
+    width: 90%;
+    max-width: 800px;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s;
+    margin: 20px 0 40px 0; 
+
+    
+}
+
+
+.image-section {
+    min-width: 200px;
+    padding: 20px;
+    background: #f8f9fa;
+}
+
+.product-img {
+    width: 180px;
+    height: 220px;
+    object-fit: contain;
+}
+
+.product-info {
+    flex: 1;
+    padding: 20px;
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        display: none;
+    }
+
+    .main-content {
+        margin-left: 0;
+    }
+    .card-product {
+        flex-direction: column;
+    }
+    .image-section {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.cards-container {
+    border: none !important;  /* Eliminar cualquier borde alrededor del contenedor */
+    margin: 0 !important;     /* Eliminar márgenes extras */
+    padding: 0 !important;    /* Eliminar rellenos innecesarios */
+}
+
