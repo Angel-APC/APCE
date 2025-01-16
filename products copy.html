@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APC Engineering</title>
+    <link rel="icon" href="img/iconos/headicon.png" type="image/png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: "Kanit-Italic", sans-serif;
+            overflow-x: hidden;
+            padding-top: 100px;
+        }
+
+        .navbar {
+            display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2e2e2e; /* Gris oscuro */
+    padding: 25px 25px;
+    height: 100px; /* Altura de la barra */
+    position: fixed; /* Fija la barra en la parte superior */
+    top: 0;
+    left: 0;
+    width: 100%; /* Asegura que ocupe todo el ancho */
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+}
+
+.navbar::before {
+    content: '';
+    position: absolute;
+    bottom: 0; /* Coloca la línea en la parte inferior de la barra */
+    left: 0;
+    width: 100%;
+    height: 4px; /* Grosor de la línea */
+    background: linear-gradient(to right, #0068FF 50%, #49ad33 50%); /* Gradiente azul a la izquierda y verde a la derecha */
+}
+
+.logo {
+    height: 70px; /* Ajusta el tamaño del logo */
+    width: auto;   /* Mantiene las proporciones del logo */
+    padding-bottom: 10px; /* Agrega separación con el borde inferior */
+}
+
+.nav-and-social {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Espaciado entre la navegación y los íconos de redes sociales */
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 0; /* Elimina el espacio entre los botones */
+    height: 10px; /* Los botones ocupan todo el alto de la barra */
+    align-items: center; /* Alinea los botones al centro de la barra */
+    padding-bottom: 10px; /* Agrega espacio en la parte inferior de los botones */
+}
+
+.nav-buttons button {
+    background-color: #4a4a4a; /* Gris intermedio */
+    color: white;
+    border: none;
+    padding: 0; /* Elimina el padding por defecto */
+    cursor: pointer;
+    border-radius: 0; /* Elimina los bordes redondeados */
+    font-family: "Montserrat-BoldItalic", sans-serif; /* Fuente Montserrat-BoldItalic */
+    font-size: 18px; 
+    width: 150px; /* Establece el ancho para que los botones sean cuadrados */
+    height: 75px; /* Los botones serán cuadrados (alto igual a ancho) */
+}
+
+.nav-buttons button:hover {
+    background-color: #616161; /* Gris más claro */
+    color: #2e2e2e; /* Cambia el texto a gris oscuro al hacer hover */
+    background-color: white; /* Invertir el color de fondo al pasar el mouse */
+}
+
+.social-buttons {
+    display: flex;
+    gap: 30px; /* Espaciado entre los íconos */
+    align-items: center;
+    margin-left: 20px; /* Espaciado a la izquierda de los íconos */
+    padding-bottom: 10px; /* Agrega separación con el borde inferior */
+}
+
+.social-icon {
+    display: inline-block;
+    margin: 0 10px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+    color: #3369ff; /* Cambia al color que prefieras */
+}
+
+        .search-container {
+            width: 100%;
+            padding: 20px;
+            background: #020202;
+            display: flex;
+            justify-content: center;
+            position: fixed;
+            top: 100px;
+            left: 0;
+            z-index: 999;
+        }
+
+        .search-bar {
+            width: 50%;
+            padding: 10px 20px;
+            border: 1px solid #ddd;
+            border-radius: 25px;
+            font-size: 16px;
+            outline: none;
+        }
+
+        .main-content {
+            margin-top: 180px;
+            display: flex;
+            min-height: calc(100vh - 180px);
+        }
+
+        .card-section {
+            width: 50%;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 15px;
+            overflow-y: auto;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            height: 450px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .image-section {
+            padding: 10px;
+            background: #f8f9fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .product-img {
+            width: 200px;
+            height: 200px;
+            object-fit: contain;
+        }
+
+        .product-info {
+            padding: 10px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product-title {
+            font-size: 18px;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .product-type {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #666;
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+
+        .category-tag {
+            background: #ffffff;
+            color: #686868;
+            padding: 6px;
+            border-radius: 20px;
+            font-size: 12px;
+            text-align: left;
+            overflow-y: auto;
+            max-height: 150px;
+        }
+
+        .product-actions {
+            display: flex;
+            gap: 10px;
+            margin-top: auto;
+            padding: 10px;
+        }
+
+        .details-btn, .contact-btn {
+            padding: 8px 12px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.3s;
+            font-size: 20px;
+            flex: 1;
+            position: sticky;
+            height: 45px;
+        }
+
+        .details-btn {
+            background: #55a4fd;
+            color: white;
+            text-align: center; 
+            text-decoration: none; /* Elimina el subrayado */
+            
+        }
+
+        .contact-btn {
+            background: #6add94;
+            color: white;
+            text-align: center;
+           text-decoration: none; /* Elimina el subrayado */
+           
+        }
+
+        .download-txt {
+            color: #f0f0f0;
+            text-decoration: none;
+        }
+
+        .fixed-section {
+            width: 50%;
+            position: fixed;
+            right: 0;
+            top: 180px;
+            height: calc(100vh - 180px);
+            background: #f5f5f5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        @media (max-width: 1200px) {
+            .card-section {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .main-content {
+                flex-direction: column;
+            }
+
+            .card-section, .fixed-section {
+                width: 100%;
+                position: static;
+            }
+
+            .card-section {
+                grid-template-columns: 1fr;
+            }
+
+            .search-bar {
+                width: 80%;
+            }
+        }
+
+        .search-wrapper {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    position: relative;
+    background-color: #222; /* Fondo oscuro para resaltar el ícono */
+    border-radius: 25px;
+}
+
+.search-bar {
+
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px 0 0 25px; /* Bordes redondeados para el campo */
+    font-size: 16px;
+    outline: none;
+    color: #1f1f1f; /* Texto blanco */
+    
+   
+}
+
+.search-icon {
+    font-size: 18px;
+    color: #fff; /* Ícono blanco */
+    padding: 10px 20px;
+    cursor: pointer; /* Muestra un puntero al pasar sobre el ícono */
+}
+
+/*  agregado */
+
+.pagination-container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #2e2e2e;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+}
+
+.page-button {
+    background-color: #4a4a4a;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: "Montserrat-BoldItalic", sans-serif;
+}
+
+.page-button:hover {
+    background-color: #616161;
+}
+
+.page-button.active {
+    background-color: #0068FF;
+}
+
+/* Adjust the card section to account for the pagination */
+.card-section {
+    padding-bottom: 70px; /* Add padding to prevent cards from being hidden behind pagination */
+}
+
+@media (max-width: 768px) {
+    .pagination-container {
+        width: 100%;
+    }
+}
+
+
+--
+.main-content {
+            margin-top: 180px;
+            display: flex;
+            min-height: calc(100vh - 180px);
+            justify-content: center; /* Center the content horizontally */
+        }
+
+        .card-section {
+            width: 80%; /* Increased width to use more space */
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 15px;
+            overflow-y: auto;
+            margin: 0 auto; /* Center the grid */
+        }
+
+        /* Rest of the styles remain the same */
+        
+        @media (max-width: 1200px) {
+            .card-section {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .main-content {
+                flex-direction: column;
+            }
+
+            .card-section {
+                width: 100%;
+                grid-template-columns: 1fr;
+            }
+
+            .search-bar {
+                width: 80%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <img src="img/Iconos/Icono_APC.png" alt="Logo" class="logo">
+        
+        <div class="nav-and-social">
+            <div class="nav-buttons">
+                
+                <a href="index.html">
+                <button>Inicio</button>
+                </a>
+
+                <a href="products.html">
+                <button>Productos</button>
+                </a>
+                
+                <a href="about.html">
+                <button>Nosotros</button>
+            </a>
+            </div>
+            <div class="social-buttons">
+                <a href="https://www.facebook.com/apcengin/" target="_blank" class="social-icon">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://www.instagram.com/apce.mx/" target="_blank" class="social-icon">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://api.whatsapp.com/send/?phone=%2B5218182743299&text&type=phone_number&app_absent=0" target="_blank" class="social-icon">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="search-container">
+        <input type="text" class="search-bar" placeholder="Buscar productos..."><i class="fas fa-search search-icon"></i>
+    </div>
+
+    <div class="product-grid">
+        <div class="main-content">
+            <div class="card-section">
+                <!-- Card 1-12 -->
+                <!-- Copy this block 12 times for 4 rows of 3 cards -->
+                <div class="product-card">
+                    <div class="image-section">
+                        <img src="img/Productos/27.png" class="product-img" alt="Imagen del producto">
+                    </div>
+                    <div class="product-info">
+                        <h2 class="product-title">DURON HP 15W-40 CK-4/SN</h2>
+                        <div class="product-type">
+                            <i class="fas fa-oil-can"></i>
+                            <span>Aceite para Motor</span>
+                        </div>
+                        <div class="product-categories">
+                            <span class="category-tag"> </span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="details-btn">Ficha Técnica</button>
+                            <a href="SDS/SDS_dhp15.pdf" class="contact-btn" target="_blank" rel="noopener noreferrer">
+                                <i>Hoja de seguridad</i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+    
+
+    
+    <!--pagina 13-->
+
+
+   
+    <div class="pagination-container">
+        <button class="page-button active">1</button>
+        <button class="page-button">2</button>
+        <button class="page-button">3</button>
+        <button class="page-button">4</button>
+        <button class="page-button">5</button>
+        <button class="page-button">6</button>
+        <button class="page-button">7</button>
+        <button class="page-button">8</button>
+        <button class="page-button">9</button>
+        <button class="page-button">10</button>
+        <button class="page-button">11</button>
+        <button class="page-button">12</button>
+        <button class="page-button">13</button>
+    </div>                
+</div>
+
+            <!-- End of card block -->
+            <!-- Repeat the above card block 11 more times -->
+        </div>
+
+
+
+<script>
+        function toggleText(id) {
+        const container = document.querySelector(`.category-tag[data-id="${id}"]`);
+        const textoCompleto = container.querySelector('.texto-completo');
+        const textoTruncado = container.querySelector('.texto-truncado');
+        const verMasBtn = container.querySelector('.ver-mas');
+        
+        if (textoCompleto.classList.contains('mostrar')) {
+            textoCompleto.classList.remove('mostrar');
+            textoTruncado.classList.remove('ocultar');
+            verMasBtn.textContent = 'ver más';
+        } else {
+            textoCompleto.classList.add('mostrar');
+            textoTruncado.classList.add('ocultar');
+            verMasBtn.textContent = 'ver menos';
+        }
+    }
+</script>
+
+<script>
+const itemsPerPage = 9; // Tarjetas por página
+const totalItems = 116; // Total de tarjetas
+const cards = document.querySelectorAll('.product-card'); // Selección de todas las tarjetas
+const pageButtons = document.querySelectorAll('.page-button'); // Selección de los botones
+
+// Función para mostrar/ocultar tarjetas según la página
+function updateCards(pageIndex) {
+    const startIndex = pageIndex * itemsPerPage;
+    const endIndex = Math.min(startIndex + itemsPerPage, totalItems);
+
+    cards.forEach((card, i) => {
+        if (i >= startIndex && i < endIndex) {
+            card.style.display = 'block'; // Muestra la tarjeta
+        } else {
+            card.style.display = 'none'; // Oculta la tarjeta
+        }
+    });
+}
+
+// Inicializar la primera página
+updateCards(0);
+
+// Configurar eventos de los botones de paginación
+pageButtons.forEach((button, index) => {
+    button.addEventListener('click', () => {
+        // Quitar la clase activa de todos los botones
+        pageButtons.forEach(btn => btn.classList.remove('active'));
+        // Agregar clase activa al botón clicado
+        button.classList.add('active');
+
+        // Actualizar las tarjetas según la página seleccionada
+        updateCards(index);
+
+        // Asegurarse de que la sección de tarjetas esté en la parte superior
+        document.querySelector('.card-section').scrollTop = 0;
+    });
+});
+
+</script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

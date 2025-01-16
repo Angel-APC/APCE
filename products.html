@@ -139,15 +139,15 @@
         .product-card {
             background: white;
             border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
             height: 450px;
             display: flex;
             flex-direction: column;
+            width: 350px;
         }
 
         .image-section {
             padding: 10px;
-            background: #f8f9fa;
+            background: #ffffff;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -206,17 +206,19 @@
             cursor: pointer;
             font-weight: 500;
             transition: all 0.3s;
-            font-size: 12px;
+            font-size: 20px;
             flex: 1;
+            position: sticky;
+            height: 45px;
         }
 
         .details-btn {
-            background: #1c82f7;
+            background: #529aec;
             color: white;
         }
 
         .contact-btn {
-            background: #25d366;
+            background: #42bb6e;
             color: white;
             text-align: center;
             text-decoration: none; /* Elimina el subrayado */
@@ -293,8 +295,93 @@
     cursor: pointer; /* Muestra un puntero al pasar sobre el ícono */
 }
 
+/*  agregado */
+
+.pagination-container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #2e2e2e;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+}
+
+.page-button {
+    background-color: #4a4a4a;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: "Montserrat-BoldItalic", sans-serif;
+}
+
+.page-button:hover {
+    background-color: #616161;
+}
+
+.page-button.active {
+    background-color: #0068FF;
+}
+
+/* Adjust the card section to account for the pagination */
+.card-section {
+    padding-bottom: 70px; /* Add padding to prevent cards from being hidden behind pagination */
+}
+
+@media (max-width: 768px) {
+    .pagination-container {
+        width: 100%;
+    }
+}
 
 
+--
+.main-content {
+            margin-top: 180px;
+            display: flex;
+            min-height: calc(100vh - 180px);
+            justify-content: center; /* Center the content horizontally */
+        }
+
+        .card-section {
+            width: 80%; /* Increased width to use more space */
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 15px;
+            overflow-y: auto;
+            margin: 0 auto; /* Center the grid */
+        }
+
+        /* Rest of the styles remain the same */
+        
+        @media (max-width: 1200px) {
+            .card-section {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .main-content {
+                flex-direction: column;
+            }
+
+            .card-section {
+                width: 100%;
+                grid-template-columns: 1fr;
+            }
+
+            .search-bar {
+                width: 80%;
+            }
+        }
     </style>
 </head>
 <body>
@@ -355,7 +442,7 @@
                         <div class="product-actions">
                             <button class="details-btn">Ficha Técnica</button>
                             <a href="SDS/SDS_dhp15.pdf" class="contact-btn" target="_blank" rel="noopener noreferrer">
-                                <i>Hoja de seguridad</i>
+                                <i>SDS</i>
                             </a>
                         </div>
                     </div>
@@ -377,7 +464,7 @@
                         <div class="product-actions">
                             <button class="details-btn">Ficha Técnica</button>
                             <a href="SDS/SDS_dhp15.pdf" class="contact-btn" target="_blank" rel="noopener noreferrer">
-                                <i>Hoja de seguridad</i>
+                                <i>SDS</i>
                             </a>
                         </div>
                     </div>
@@ -392,7 +479,7 @@
                         <h2 class="product-title">DURON GEO LD 15W-40</h2>
                         <div class="product-type">
                             <i class="fas fa-oil-can"></i>
-                            <span>Aceite para Motor</span>
+                            <span>Aceite para Motor gas natural</span>
                         </div>
                         <div class="product-categories">
                             <span class="category-tag"> </span>
@@ -400,7 +487,7 @@
                         <div class="product-actions">
                             <button class="details-btn">Ficha Técnica</button>
                             <a href="SDS/SDS_dgeo15.pdf" class="contact-btn" target="_blank" rel="noopener noreferrer">
-                                <i>Hoja de seguridad</i>
+                                <i>SDS</i>
                             </a>
                         </div>
                     </div>
@@ -416,7 +503,7 @@
                         <h2 class="product-title">Hydrex AW 46</h2>
                         <div class="product-type">
                             <i class="fas fa-oil-can"></i>
-                            <span>Aceite para Motor</span>
+                            <span>Aceite Hidráulico</span>
                         </div>
                         <div class="product-categories">
                             <span class="category-tag"> </span>
@@ -424,7 +511,7 @@
                         <div class="product-actions">
                             <button class="details-btn">Ficha Técnica</button>
                             <a href="SDS/SDS_hdxaw46.pdf" class="contact-btn" target="_blank" rel="noopener noreferrer">
-                                <i>Hoja de seguridad</i>
+                                <i>SDS</i>
                             </a>
                         </div>
                     </div>
@@ -446,7 +533,7 @@
                         <div class="product-actions">
                             <button class="details-btn">Ficha Técnica</button>
                             <a href="SDS/SDS_ddhd668.pdf" class="contact-btn" target="_blank" rel="noopener noreferrer">
-                                <i>Hoja de seguridad</i>
+                                <i>SDS</i>
                             </a>
                         </div>
                     </div>
@@ -468,7 +555,7 @@
                         <div class="product-actions">
                             <button class="details-btn">Ficha Técnica</button>
                             <a href="SDS/SDS_dhp15.pdf" class="contact-btn" target="_blank" rel="noopener noreferrer">
-                                <i>Hoja de seguridad</i>
+                                <i>SDS</i>
                             </a>
                         </div>
                     </div>
@@ -490,7 +577,7 @@
                         <div class="product-actions">
                             <button class="details-btn">Ficha Técnica</button>
                             <a href="SDS/SDS_dshp15.pdf" class="contact-btn" target="_blank" rel="noopener noreferrer">
-                                <i>Hoja de seguridad</i>
+                                <i>SDS</i>
                             </a>
                         </div>
                     </div>
@@ -512,7 +599,7 @@
                         <div class="product-actions">
                             <button class="details-btn">Ficha Técnica</button>
                             <a href="SDS/SDS_dshp13.pdf" class="contact-btn" target="_blank" rel="noopener noreferrer">
-                                <i>Hoja de seguridad</i>
+                                <i>SDS</i>
                             </a>
                         </div>
                     </div>
@@ -534,7 +621,7 @@
                         <div class="product-actions">
                             <button class="details-btn">Ficha Técnica</button>
                             <a href="SDS/SDS_duhp03.pdf" class="contact-btn" target="_blank" rel="noopener noreferrer">
-                                <i>Hoja de seguridad</i>
+                                <i>SDS</i>
                             </a>
                         </div>
                     </div>
@@ -559,7 +646,7 @@
                         <div class="product-actions">
                             <button class="details-btn">Ficha Técnica</button>
                             <a href="SDS/SDS_duhp14.pdf" class="contact-btn" target="_blank" rel="noopener noreferrer">
-                                <i>Hoja de seguridad</i>
+                                <i>SDS</i>
                             </a>
                         </div>
                     </div>
@@ -582,7 +669,7 @@
                         <div class="product-actions">
                             <button class="details-btn">Ficha Técnica</button>
                             <a href="SDS/SDS_tr89.pdf" class="contact-btn" target="_blank" rel="noopener noreferrer">
-                                <i>Hoja de seguridad</i>
+                                <i>SDS</i>
                             </a>
                         </div>
                     </div>
@@ -604,7 +691,7 @@
             <div class="product-actions">
                 <button class="details-btn">Ficha Técnica</button>
                 <a href="SDS/SDS_tr89.pdf" class="contact-btn" target="_blank" rel="noopener noreferrer">
-                    <i>Hoja de seguridad</i>
+                    <i>SDS</i>
                 </a>
             </div>
         </div>
@@ -626,7 +713,7 @@
             <div class="product-actions">
                 <button class="details-btn">Ficha Técnica</button>
                 <a href="SDS/SDS_tr8514 (1).pdf" class="contact-btn" target="_blank" rel="noopener noreferrer">
-                    <i>Hoja de seguridad</i>
+                    <i>SDS</i>
                 </a>
             </div>
         </div>
@@ -648,7 +735,7 @@
             <div class="product-actions">
                 <button class="details-btn">Ficha Técnica</button>
                 <a href="SDS/SDS_tr8514 (1).pdf" class="contact-btn" target="_blank" rel="noopener noreferrer">
-                    <i>Hoja de seguridad</i>
+                    <i>SDS</i>
                 </a>
             </div>
         </div>
@@ -671,7 +758,7 @@
             <div class="product-actions">
                 <button class="details-btn">Ficha Técnica</button>
                 <a href="SDS/SDS_trsy759.pdf" class="contact-btn" target="_blank" rel="noopener noreferrer">
-                    <i>Hoja de seguridad</i>
+                    <i>SDS</i>
                 </a>
             </div>
         </div>
@@ -693,7 +780,7 @@
             <div class="product-actions">
                 <button class="details-btn">Ficha Técnica</button>
                 <a href="SDS/SDS_dtran.pdf" class="contact-btn" target="_blank" rel="noopener noreferrer">
-                    <i>Hoja de seguridad</i>
+                    <i>SDS</i>
                 </a>
             </div>
         </div>
@@ -715,7 +802,7 @@
             <div class="product-actions">
                 <button class="details-btn">Ficha Técnica</button>
                 <a href="SDS/SDS_pd410w.pdf" class="contact-btn" target="_blank" rel="noopener noreferrer">
-                    <i>Hoja de seguridad</i>
+                    <i>SDS</i>
                 </a>
             </div>
         </div>
@@ -738,7 +825,7 @@
             <div class="product-actions">
                 <button class="details-btn">Ficha Técnica</button>
                 <a href="SDS/SDS_pd410w.pdf" class="contact-btn" target="_blank" rel="noopener noreferrer">
-                    <i>Hoja de seguridad</i>
+                    <i>SDS</i>
                 </a>
             </div>
         </div>
@@ -763,7 +850,7 @@
             <div class="product-actions">
                 <button class="details-btn">Ficha Técnica</button>
                 <a href="SDS/SDS_pd430.pdf" class="contact-btn" target="_blank" rel="noopener noreferrer">
-                    <i>Hoja de seguridad</i>
+                    <i>SDS</i>
                 </a>
             </div>
         </div>
@@ -785,7 +872,7 @@
             <div class="product-actions">
                 <button class="details-btn">Ficha Técnica</button>
                 <a href="SDS/SDS_pd450.pdf" class="contact-btn" target="_blank" rel="noopener noreferrer">
-                    <i>Hoja de seguridad</i>
+                    <i>SDS</i>
                 </a>
             </div>
         </div>
@@ -827,7 +914,7 @@
             <div class="product-actions">
                 <button class="details-btn">Ficha Técnica</button>
                 <a href="SDS/SDS_stlcg.pdf" class="contact-btn" target="_blank" rel="noopener noreferrer">
-                    <i>Hoja de seguridad</i>
+                    <i>SDS</i>
                 </a>
             </div>
         </div>
@@ -849,7 +936,7 @@
             <div class="product-actions">
                 <button class="details-btn">Ficha Técnica</button>
                 <a href="SDS/SDS_stn5ld.pdf" class="contact-btn" target="_blank" rel="noopener noreferrer">
-                    <i>Hoja de seguridad</i>
+                    <i>SDS</i>
                 </a>
             </div>
         </div>
@@ -871,7 +958,7 @@
             <div class="product-actions">
                 <button class="details-btn">Ficha Técnica</button>
                 <a href="SDS/SDS_stn5ld.pdf" class="contact-btn" target="_blank" rel="noopener noreferrer">
-                    <i>Hoja de seguridad</i>
+                    <i>SDS</i>
                 </a>
             </div>
         </div>
@@ -893,7 +980,7 @@
             <div class="product-actions">
                 <button class="details-btn">Ficha Técnica</button>
                 <a href="SDS/SDS_stn8ld.pdf" class="contact-btn" target="_blank" rel="noopener noreferrer">
-                    <i>Hoja de seguridad</i>
+                    <i>SDS</i>
                 </a>
             </div>
         </div>
@@ -915,7 +1002,7 @@
             <div class="product-actions">
                 <button class="details-btn">Ficha Técnica</button>
                 <a href="SDS/SDS_hdxaw32.pdf" class="contact-btn" target="_blank" rel="noopener noreferrer">
-                    <i>Hoja de seguridad</i>
+                    <i>SDS</i>
                 </a>
             </div>
         </div>
@@ -937,7 +1024,7 @@
             <div class="product-actions">
                 <button class="details-btn">Ficha Técnica</button>
                 <a href="SDS/SDS_hdxaw46.pdf" class="contact-btn" target="_blank" rel="noopener noreferrer">
-                    <i>Hoja de seguridad</i>
+                    <i>SDS</i>
                 </a>
             </div>
         </div>
@@ -962,7 +1049,7 @@
             <div class="product-actions">
                 <button class="details-btn">Ficha Técnica</button>
                 <a href="SDS/SDS_hdxaw68.pdf" class="contact-btn" target="_blank" rel="noopener noreferrer">
-                    <i>Hoja de seguridad</i>
+                    <i>SDS</i>
                 </a>
             </div>
         </div>
@@ -984,7 +1071,7 @@
             <div class="product-actions">
                 <button class="details-btn">Ficha Técnica</button>
                 <a href="SDS/SDS_hdxaw10.pdf" class="contact-btn" target="_blank" rel="noopener noreferrer">
-                    <i>Hoja de seguridad</i>
+                    <i>SDS</i>
                 </a>
             </div>
         </div>
@@ -1006,7 +1093,7 @@
             <div class="product-actions">
                 <button class="details-btn">Ficha Técnica</button>
                 <a href="SDS/SDS_hdxmv32.pdf" class="contact-btn" target="_blank" rel="noopener noreferrer">
-                    <i>Hoja de seguridad</i>
+                    <i>SDS</i>
                 </a>
             </div>
         </div>
@@ -1028,7 +1115,7 @@
             <div class="product-actions">
                 <button class="details-btn">Ficha Técnica</button>
                 <a href="SDS/SDS_hdxmv32.pdf" class="contact-btn" target="_blank" rel="noopener noreferrer">
-                    <i>Hoja de seguridad</i>
+                    <i>SDS</i>
                 </a>
             </div>
         </div>
@@ -1050,7 +1137,7 @@
             <div class="product-actions">
                 <button class="details-btn">Ficha Técnica</button>
                 <a href="SDS/SDS_hdxmv46.pdf" class="contact-btn" target="_blank" rel="noopener noreferrer">
-                    <i>Hoja de seguridad</i>
+                    <i>SDS</i>
                 </a>
             </div>
         </div>
@@ -1072,7 +1159,7 @@
             <div class="product-actions">
                 <button class="details-btn">Ficha Técnica</button>
                 <a href="SDS/SDS_hdxmv46.pdf" class="contact-btn" target="_blank" rel="noopener noreferrer">
-                    <i>Hoja de seguridad</i>
+                    <i>SDS</i>
                 </a>
             </div>
         </div>
@@ -1094,7 +1181,7 @@
             <div class="product-actions">
                 <button class="details-btn">Ficha Técnica</button>
                 <a href="SDS/SDS_pgp2.pdf" class="contact-btn" target="_blank" rel="noopener noreferrer">
-                    <i>Hoja de seguridad</i>
+                    <i>SDS</i>
                 </a>
             </div>
         </div>
@@ -1116,7 +1203,7 @@
             <div class="product-actions">
                 <button class="details-btn">Ficha Técnica</button>
                 <a href="SDS/SDS_pxl000.pdf" class="contact-btn" target="_blank" rel="noopener noreferrer">
-                    <i>Hoja de seguridad</i>
+                    <i>SDS</i>
                 </a>
             </div>
         </div>
@@ -1139,7 +1226,7 @@
             <div class="product-actions">
                 <button class="details-btn">Ficha Técnica</button>
                 <a href="SDS/SDS_pxl2.pdf" class="contact-btn" target="_blank" rel="noopener noreferrer">
-                    <i>Hoja de seguridad</i>
+                    <i>SDS</i>
                 </a>
             </div>
         </div>
@@ -1164,7 +1251,7 @@
             <div class="product-actions">
                 <button class="details-btn">Ficha Técnica</button>
                 <a href="SDS/SDS_pxl2.pdf" class="contact-btn" target="_blank" rel="noopener noreferrer">
-                    <i>Hoja de seguridad</i>
+                    <i>SDS</i>
                 </a>
             </div>
         </div>
@@ -1186,7 +1273,7 @@
             <div class="product-actions">
                 <button class="details-btn">Ficha Técnica</button>
                 <a href="SDS/SDS_pxl5m2.pdf" class="contact-btn" target="_blank" rel="noopener noreferrer">
-                    <i>Hoja de seguridad</i>
+                    <i>SDS</i>
                 </a>
             </div>
         </div>
@@ -1208,7 +1295,7 @@
             <div class="product-actions">
                 <button class="details-btn">Ficha Técnica</button>
                 <a href="SDS/SDS_pxl5m2.pdf" class="contact-btn" target="_blank" rel="noopener noreferrer">
-                    <i>Hoja de seguridad</i>
+                    <i>SDS</i>
                 </a>
             </div>
         </div>
@@ -1230,7 +1317,7 @@
             <div class="product-actions">
                 <button class="details-btn">Ficha Técnica</button>
                 <a href="SDS/SDS_psemb.pdf" class="contact-btn" target="_blank" rel="noopener noreferrer">
-                    <i>Hoja de seguridad</i>
+                    <i>SDS</i>
                 </a>
             </div>
         </div>
@@ -1252,7 +1339,7 @@
             <div class="product-actions">
                 <button class="details-btn">Ficha Técnica</button>
                 <a href="SDS/SDS_ps.pdf" class="contact-btn" target="_blank" rel="noopener noreferrer">
-                    <i>Hoja de seguridad</i>
+                    <i>SDS</i>
                 </a>
             </div>
         </div>
@@ -1274,7 +1361,7 @@
             <div class="product-actions">
                 <button class="details-btn">Ficha Técnica</button>
                 <a href="SDS/SDS_ps.pdf" class="contact-btn" target="_blank" rel="noopener noreferrer">
-                    <i>Hoja de seguridad</i>
+                    <i>SDS</i>
                 </a>
             </div>
         </div>
@@ -1296,7 +1383,7 @@
             <div class="product-actions">
                 <button class="details-btn">Ficha Técnica</button>
                 <a href="SDS/SDS_ps.pdf" class="contact-btn" target="_blank" rel="noopener noreferrer">
-                    <i>Hoja de seguridad</i>
+                    <i>SDS</i>
                 </a>
             </div>
         </div>
@@ -1318,7 +1405,7 @@
             <div class="product-actions">
                 <button class="details-btn">Ficha Técnica</button>
                 <a href="SDS/SDS_plog1.pdf" class="contact-btn" target="_blank" rel="noopener noreferrer">
-                    <i>Hoja de seguridad</i>
+                    <i>SDS</i>
                 </a>
             </div>
         </div>
@@ -1340,7 +1427,7 @@
             <div class="product-actions">
                 <button class="details-btn">Ficha Técnica</button>
                 <a href="SDS/SDS_plog2.pdf" class="contact-btn" target="_blank" rel="noopener noreferrer">
-                    <i>Hoja de seguridad</i>
+                    <i>SDS</i>
                 </a>
             </div>
         </div>
@@ -1365,7 +1452,7 @@
             <div class="product-actions">
                 <button class="details-btn">Ficha Técnica</button>
                 <a href="SDS/SDS_plogp.pdf" class="contact-btn" target="_blank" rel="noopener noreferrer">
-                    <i>Hoja de seguridad</i>
+                    <i>SDS</i>
                 </a>
             </div>
         </div>
@@ -1387,7 +1474,7 @@
             <div class="product-actions">
                 <button class="details-btn">Ficha Técnica</button>
                 <a href="SDS/SDS_plxcg.pdf" class="contact-btn" target="_blank" rel="noopener noreferrer">
-                    <i>Hoja de seguridad</i>
+                    <i>SDS</i>
                 </a>
             </div>
         </div>
@@ -1409,7 +1496,7 @@
             <div class="product-actions">
                 <button class="details-btn">Ficha Técnica</button>
                 <a href="SDS/SDS_plllg.pdf" class="contact-btn" target="_blank" rel="noopener noreferrer">
-                    <i>Hoja de seguridad</i>
+                    <i>SDS</i>
                 </a>
             </div>
         </div>
@@ -1431,7 +1518,7 @@
             <div class="product-actions">
                 <button class="details-btn">Ficha Técnica</button>
                 <a href="SDS/SDS_plllg.pdf" class="contact-btn" target="_blank" rel="noopener noreferrer">
-                    <i>Hoja de seguridad</i>
+                    <i>SDS</i>
                 </a>
             </div>
         </div>
@@ -1453,7 +1540,7 @@
             <div class="product-actions">
                 <button class="details-btn">Ficha Técnica</button>
                 <a href="SDS/SDS_plllg.pdf" class="contact-btn" target="_blank" rel="noopener noreferrer">
-                    <i>Hoja de seguridad</i>
+                    <i>SDS</i>
                 </a>
             </div>
         </div>
@@ -1475,7 +1562,7 @@
             <div class="product-actions">
                 <button class="details-btn">Ficha Técnica</button>
                 <a href="SDS/SDS_plemb.pdf" class="contact-btn" target="_blank" rel="noopener noreferrer">
-                    <i>Hoja de seguridad</i>
+                    <i>SDS</i>
                 </a>
             </div>
         </div>
@@ -1497,7 +1584,7 @@
             <div class="product-actions">
                 <button class="details-btn">Ficha Técnica</button>
                 <a href="SDS/Thermex.pdf" class="contact-btn" target="_blank" rel="noopener noreferrer">
-                    <i>Hoja de seguridad</i>
+                    <i>SDS</i>
                 </a>
             </div>
         </div>
@@ -1519,7 +1606,7 @@
             <div class="product-actions">
                 <button class="details-btn">Ficha Técnica</button>
                 <a href="SDS/SDS_vulmpg1.pdf" class="contact-btn" target="_blank" rel="noopener noreferrer">
-                    <i>Hoja de seguridad</i>
+                    <i>SDS</i>
                 </a>
             </div>
         </div>
@@ -1541,7 +1628,7 @@
             <div class="product-actions">
                 <button class="details-btn">Ficha Técnica</button>
                 <a href="SDS/SDS_vulmpg1.pdf" class="contact-btn" target="_blank" rel="noopener noreferrer">
-                    <i>Hoja de seguridad</i>
+                    <i>SDS</i>
                 </a>
             </div>
         </div>
@@ -1565,7 +1652,7 @@
             <div class="product-actions">
                 <button class="details-btn">Ficha Técnica</button>
                 <a href="SDS/SDS_cpxs46.pdf" class="contact-btn" target="_blank" rel="noopener noreferrer">
-                    <i>Hoja de seguridad</i>
+                    <i>SDS</i>
                 </a>
             </div>
         </div>
@@ -1587,7 +1674,7 @@
             <div class="product-actions">
                 <button class="details-btn">Ficha Técnica</button>
                 <a href="SDS/SDS_cpxs68.pdf" class="contact-btn" target="_blank" rel="noopener noreferrer">
-                    <i>Hoja de seguridad</i>
+                    <i>SDS</i>
                 </a>
             </div>
         </div>
@@ -1609,7 +1696,7 @@
             <div class="product-actions">
                 <button class="details-btn">Ficha Técnica</button>
                 <a href="SDS/SDS_cpxs100.pdf" class="contact-btn" target="_blank" rel="noopener noreferrer">
-                    <i>Hoja de seguridad</i>
+                    <i>SDS</i>
                 </a>
             </div>
         </div>
@@ -1631,7 +1718,7 @@
             <div class="product-actions">
                 <button class="details-btn">Ficha Técnica</button>
                 <a href="SDS/SDS_refl68a.pdf" class="contact-btn" target="_blank" rel="noopener noreferrer">
-                    <i>Hoja de seguridad</i>
+                    <i>SDS</i>
                 </a>
             </div>
         </div>
@@ -1653,7 +1740,7 @@
             <div class="product-actions">
                 <button class="details-btn">Ficha Técnica</button>
                 <a href="SDS/SDS_svf20.pdf" class="contact-btn" target="_blank" rel="noopener noreferrer">
-                    <i>Hoja de seguridad</i>
+                    <i>SDS</i>
                 </a>
             </div>
         </div>
@@ -1675,7 +1762,7 @@
             <div class="product-actions">
                 <button class="details-btn">Ficha Técnica</button>
                 <a href="SDS/SDS_ent68.pdf" class="contact-btn" target="_blank" rel="noopener noreferrer">
-                    <i>Hoja de seguridad</i>
+                    <i>SDS</i>
                 </a>
             </div>
         </div>
@@ -1697,7 +1784,7 @@
             <div class="product-actions">
                 <button class="details-btn">Ficha Técnica</button>
                 <a href="SDS/SDS_ent100.pdf" class="contact-btn" target="_blank" rel="noopener noreferrer">
-                    <i>Hoja de seguridad</i>
+                    <i>SDS</i>
                 </a>
             </div>
         </div>
@@ -1719,7 +1806,7 @@
             <div class="product-actions">
                 <button class="details-btn">Ficha Técnica</button>
                 <a href="SDS/SDS_ent150.pdf" class="contact-btn" target="_blank" rel="noopener noreferrer">
-                    <i>Hoja de seguridad</i>
+                    <i>SDS</i>
                 </a>
             </div>
         </div>
@@ -1741,7 +1828,7 @@
             <div class="product-actions">
                 <button class="details-btn">Ficha Técnica</button>
                 <a href="SDS/SDS_ent150.pdf" class="contact-btn" target="_blank" rel="noopener noreferrer">
-                    <i>Hoja de seguridad</i>
+                    <i>SDS</i>
                 </a>
             </div>
         </div>
@@ -1765,7 +1852,7 @@
             <div class="product-actions">
                 <button class="details-btn">Ficha Técnica</button>
                 <a href="SDS/SDS_ent220.pdf" class="contact-btn" target="_blank" rel="noopener noreferrer">
-                    <i>Hoja de seguridad</i>
+                    <i>SDS</i>
                 </a>
             </div>
         </div>
@@ -1787,7 +1874,7 @@
             <div class="product-actions">
                 <button class="details-btn">Ficha Técnica</button>
                 <a href="SDS/SDS_ent220.pdf" class="contact-btn" target="_blank" rel="noopener noreferrer">
-                    <i>Hoja de seguridad</i>
+                    <i>SDS</i>
                 </a>
             </div>
         </div>
@@ -1809,7 +1896,7 @@
             <div class="product-actions">
                 <button class="details-btn">Ficha Técnica</button>
                 <a href="SDS/SDS_ent320.pdf" class="contact-btn" target="_blank" rel="noopener noreferrer">
-                    <i>Hoja de seguridad</i>
+                    <i>SDS</i>
                 </a>
             </div>
         </div>
@@ -1831,7 +1918,7 @@
             <div class="product-actions">
                 <button class="details-btn">Ficha Técnica</button>
                 <a href="SDS/SDS_ent320.pdf" class="contact-btn" target="_blank" rel="noopener noreferrer">
-                    <i>Hoja de seguridad</i>
+                    <i>SDS</i>
                 </a>
             </div>
         </div>
@@ -1853,7 +1940,7 @@
             <div class="product-actions">
                 <button class="details-btn">Ficha Técnica</button>
                 <a href="SDS/SDS_ent460.pdf" class="contact-btn" target="_blank" rel="noopener noreferrer">
-                    <i>Hoja de seguridad</i>
+                    <i>SDS</i>
                 </a>
             </div>
         </div>
@@ -1875,7 +1962,7 @@
             <div class="product-actions">
                 <button class="details-btn">Ficha Técnica</button>
                 <a href="SDS/SDS_ent460.pdf" class="contact-btn" target="_blank" rel="noopener noreferrer">
-                    <i>Hoja de seguridad</i>
+                    <i>SDS</i>
                 </a>
             </div>
         </div>
@@ -1897,7 +1984,7 @@
             <div class="product-actions">
                 <button class="details-btn">Ficha Técnica</button>
                 <a href="SDS/SDS_ent680.pdf" class="contact-btn" target="_blank" rel="noopener noreferrer">
-                    <i>Hoja de seguridad</i>
+                    <i>SDS</i>
                 </a>
             </div>
         </div>
@@ -1919,7 +2006,7 @@
             <div class="product-actions">
                 <button class="details-btn">Ficha Técnica</button>
                 <a href="SDS/SDS_ent680.pdf" class="contact-btn" target="_blank" rel="noopener noreferrer">
-                    <i>Hoja de seguridad</i>
+                    <i>SDS</i>
                 </a>
             </div>
         </div>
@@ -1941,7 +2028,7 @@
             <div class="product-actions">
                 <button class="details-btn">Ficha Técnica</button>
                 <a href="SDS/SDS_ent68.pdf" class="contact-btn" target="_blank" rel="noopener noreferrer">
-                    <i>Hoja de seguridad</i>
+                    <i>SDS</i>
                 </a>
             </div>
         </div>
@@ -1965,7 +2052,7 @@
             <div class="product-actions">
                 <button class="details-btn">Ficha Técnica</button>
                 <a href="SDS/SDS_ent68.pdf" class="contact-btn" target="_blank" rel="noopener noreferrer">
-                    <i>Hoja de seguridad</i>
+                    <i>SDS</i>
                 </a>
             </div>
         </div>
@@ -1987,7 +2074,7 @@
             <div class="product-actions">
                 <button class="details-btn">Ficha Técnica</button>
                 <a href="SDS/SDS_ents150.pdf" class="contact-btn" target="_blank" rel="noopener noreferrer">
-                    <i>Hoja de seguridad</i>
+                    <i>SDS</i>
                 </a>
             </div>
         </div>
@@ -2009,7 +2096,7 @@
             <div class="product-actions">
                 <button class="details-btn">Ficha Técnica</button>
                 <a href="SDS/SDS_ents150.pdf" class="contact-btn" target="_blank" rel="noopener noreferrer">
-                    <i>Hoja de seguridad</i>
+                    <i>SDS</i>
                 </a>
             </div>
         </div>
@@ -2031,7 +2118,7 @@
             <div class="product-actions">
                 <button class="details-btn">Ficha Técnica</button>
                 <a href="SDS/SDS_ents320.pdf" class="contact-btn" target="_blank" rel="noopener noreferrer">
-                    <i>Hoja de seguridad</i>
+                    <i>SDS</i>
                 </a>
             </div>
         </div>
@@ -2053,7 +2140,7 @@
             <div class="product-actions">
                 <button class="details-btn">Ficha Técnica</button>
                 <a href="SDS/SDS_ents320.pdf" class="contact-btn" target="_blank" rel="noopener noreferrer">
-                    <i>Hoja de seguridad</i>
+                    <i>SDS</i>
                 </a>
             </div>
         </div>
@@ -2075,7 +2162,7 @@
             <div class="product-actions">
                 <button class="details-btn">Ficha Técnica</button>
                 <a href="SDS/SDS_ents460.pdf" class="contact-btn" target="_blank" rel="noopener noreferrer">
-                    <i>Hoja de seguridad</i>
+                    <i>SDS</i>
                 </a>
             </div>
         </div>
@@ -2097,7 +2184,7 @@
             <div class="product-actions">
                 <button class="details-btn">Ficha Técnica</button>
                 <a href="SDS/SDS_ents460.pdf" class="contact-btn" target="_blank" rel="noopener noreferrer">
-                    <i>Hoja de seguridad</i>
+                    <i>SDS</i>
                 </a>
             </div>
         </div>
@@ -2120,7 +2207,7 @@
             <div class="product-actions">
                 <button class="details-btn">Ficha Técnica</button>
                 <a href="SDS/SDS_synd46.pdf" class="contact-btn" target="_blank" rel="noopener noreferrer">
-                    <i>Hoja de seguridad</i>
+                    <i>SDS</i>
                 </a>
             </div>
         </div>
@@ -2142,7 +2229,7 @@
             <div class="product-actions">
                 <button class="details-btn">Ficha Técnica</button>
                 <a href="SDS/SDS_acflk68.pdf" class="contact-btn" target="_blank" rel="noopener noreferrer">
-                    <i>Hoja de seguridad</i>
+                    <i>SDS</i>
                 </a>
             </div>
         </div>
@@ -2166,7 +2253,7 @@
             <div class="product-actions">
                 <button class="details-btn">Ficha Técnica</button>
                 <a href="SDS/SDS_dtac150.pdf" class="contact-btn" target="_blank" rel="noopener noreferrer">
-                    <i>Hoja de seguridad</i>
+                    <i>SDS</i>
                 </a>
             </div>
         </div>
@@ -2188,7 +2275,7 @@
             <div class="product-actions">
                 <button class="details-btn">Ficha Técnica</button>
                 <a href="SDS/SDS_pfaw46.pdf" class="contact-btn" target="_blank" rel="noopener noreferrer">
-                    <i>Hoja de seguridad</i>
+                    <i>SDS</i>
                 </a>
             </div>
         </div>
@@ -2210,7 +2297,7 @@
             <div class="product-actions">
                 <button class="details-btn">Ficha Técnica</button>
                 <a href="SDS/SDS_pfaw68.pdf" class="contact-btn" target="_blank" rel="noopener noreferrer">
-                    <i>Hoja de seguridad</i>
+                    <i>SDS</i>
                 </a>
             </div>
         </div>
@@ -2232,7 +2319,7 @@
             <div class="product-actions">
                 <button class="details-btn">Ficha Técnica</button>
                 <a href="SDS/SDS_pfchal.pdf" class="contact-btn" target="_blank" rel="noopener noreferrer">
-                    <i>Hoja de seguridad</i>
+                    <i>SDS</i>
                 </a>
             </div>
         </div>
@@ -2254,7 +2341,7 @@
             <div class="product-actions">
                 <button class="details-btn">Ficha Técnica</button>
                 <a href="SDS/SDS_pfchah.pdf" class="contact-btn" target="_blank" rel="noopener noreferrer">
-                    <i>Hoja de seguridad</i>
+                    <i>SDS</i>
                 </a>
             </div>
         </div>
@@ -2276,7 +2363,7 @@
             <div class="product-actions">
                 <button class="details-btn">Ficha Técnica</button>
                 <a href="SDS/SDS_pfep100.pdf" class="contact-btn" target="_blank" rel="noopener noreferrer">
-                    <i>Hoja de seguridad</i>
+                    <i>SDS</i>
                 </a>
             </div>
         </div>
@@ -2298,7 +2385,7 @@
             <div class="product-actions">
                 <button class="details-btn">Ficha Técnica</button>
                 <a href="SDS/SDS_pfep220.pdf" class="contact-btn" target="_blank" rel="noopener noreferrer">
-                    <i>Hoja de seguridad</i>
+                    <i>SDS</i>
                 </a>
             </div>
         </div>
@@ -2320,7 +2407,7 @@
             <div class="product-actions">
                 <button class="details-btn">Ficha Técnica</button>
                 <a href="SDS/SDS_pfep320.pdf" class="contact-btn" target="_blank" rel="noopener noreferrer">
-                    <i>Hoja de seguridad</i>
+                    <i>SDS</i>
                 </a>
             </div>
         </div>
@@ -2342,7 +2429,7 @@
             <div class="product-actions">
                 <button class="details-btn">Ficha Técnica</button>
                 <a href="SDS/SDS_pfg1.pdf" class="contact-btn" target="_blank" rel="noopener noreferrer">
-                    <i>Hoja de seguridad</i>
+                    <i>SDS</i>
                 </a>
             </div>
         </div>
@@ -2366,7 +2453,7 @@
             <div class="product-actions">
                 <button class="details-btn">Ficha Técnica</button>
                 <a href="SDS/SDS_pfg2.pdf" class="contact-btn" target="_blank" rel="noopener noreferrer">
-                    <i>Hoja de seguridad</i>
+                    <i>SDS</i>
                 </a>
             </div>
         </div>
@@ -2388,7 +2475,7 @@
             <div class="product-actions">
                 <button class="details-btn">Ficha Técnica</button>
                 <a href="SDS/SDS_pfgcl2.pdf" class="contact-btn" target="_blank" rel="noopener noreferrer">
-                    <i>Hoja de seguridad</i>
+                    <i>SDS</i>
                 </a>
             </div>
         </div>
@@ -2410,7 +2497,7 @@
             <div class="product-actions">
                 <button class="details-btn">Ficha Técnica</button>
                 <a href="SDS/SDS_pfgsyn2.pdf" class="contact-btn" target="_blank" rel="noopener noreferrer">
-                    <i>Hoja de seguridad</i>
+                    <i>SDS</i>
                 </a>
             </div>
         </div>
@@ -2432,7 +2519,7 @@
             <div class="product-actions">
                 <button class="details-btn">Ficha Técnica</button>
                 <a href="SDS/SDS_pfhtf.pdf" class="contact-btn" target="_blank" rel="noopener noreferrer">
-                    <i>Hoja de seguridad</i>
+                    <i>SDS</i>
                 </a>
             </div>
         </div>
@@ -2454,7 +2541,7 @@
             <div class="product-actions">
                 <button class="details-btn">Ficha Técnica</button>
                 <a href="SDS/SDS_pfhtf.pdf" class="contact-btn" target="_blank" rel="noopener noreferrer">
-                    <i>Hoja de seguridad</i>
+                    <i>SDS</i>
                 </a>
             </div>
         </div>
@@ -2476,7 +2563,7 @@
             <div class="product-actions">
                 <button class="details-btn">Ficha Técnica</button>
                 <a href="SDS/SDS_pfmu.pdf" class="contact-btn" target="_blank" rel="noopener noreferrer">
-                    <i>Hoja de seguridad</i>
+                    <i>SDS</i>
                 </a>
             </div>
         </div>
@@ -2498,7 +2585,7 @@
             <div class="product-actions">
                 <button class="details-btn">Ficha Técnica</button>
                 <a href="SDS/SDS_pfpou.pdf" class="contact-btn" target="_blank" rel="noopener noreferrer">
-                    <i>Hoja de seguridad</i>
+                    <i>SDS</i>
                 </a>
             </div>
         </div>
@@ -2520,7 +2607,7 @@
             <div class="product-actions">
                 <button class="details-btn">Ficha Técnica</button>
                 <a href="SDS/SDS_pfwo15.pdf" class="contact-btn" target="_blank" rel="noopener noreferrer">
-                    <i>Hoja de seguridad</i>
+                    <i>SDS</i>
                 </a>
             </div>
         </div>
@@ -2542,7 +2629,7 @@
             <div class="product-actions">
                 <button class="details-btn">Ficha Técnica</button>
                 <a href="SDS/SDS_pfwo15.pdf" class="contact-btn" target="_blank" rel="noopener noreferrer">
-                    <i>Hoja de seguridad</i>
+                    <i>SDS</i>
                 </a>
             </div>
         </div>
@@ -2566,7 +2653,7 @@
             <div class="product-actions">
                 <button class="details-btn">Ficha Técnica</button>
                 <a href="SDS/SDS_pfwo68.pdf" class="contact-btn" target="_blank" rel="noopener noreferrer">
-                    <i>Hoja de seguridad</i>
+                    <i>SDS</i>
                 </a>
             </div>
         </div>
@@ -2588,7 +2675,7 @@
             <div class="product-actions">
                 <button class="details-btn">Ficha Técnica</button>
                 <a href="SDS/SDS_tfxl32.pdf" class="contact-btn" target="_blank" rel="noopener noreferrer">
-                    <i>Hoja de seguridad</i>
+                    <i>SDS</i>
                 </a>
             </div>
         </div>
@@ -2610,7 +2697,7 @@
             <div class="product-actions">
                 <button class="details-btn">Ficha Técnica</button>
                 <a href="SDS/SDS_tfxl46.pdf" class="contact-btn" target="_blank" rel="noopener noreferrer">
-                    <i>Hoja de seguridad</i>
+                    <i>SDS</i>
                 </a>
             </div>
         </div>
@@ -2632,7 +2719,7 @@
             <div class="product-actions">
                 <button class="details-btn">Ficha Técnica</button>
                 <a href="SDS/SDS_tfxl68.pdf" class="contact-btn" target="_blank" rel="noopener noreferrer">
-                    <i>Hoja de seguridad</i>
+                    <i>SDS</i>
                 </a>
             </div>
         </div>
@@ -2654,7 +2741,7 @@
             <div class="product-actions">
                 <button class="details-btn">Ficha Técnica</button>
                 <a href="SDS/SDS_tfxl68.pdf" class="contact-btn" target="_blank" rel="noopener noreferrer">
-                    <i>Hoja de seguridad</i>
+                    <i>SDS</i>
                 </a>
             </div>
         </div>
@@ -2676,7 +2763,7 @@
             <div class="product-actions">
                 <button class="details-btn">Ficha Técnica</button>
                 <a href="SDS/SDS_tfro10.pdf" class="contact-btn" target="_blank" rel="noopener noreferrer">
-                    <i>Hoja de seguridad</i>
+                    <i>SDS</i>
                 </a>
             </div>
         </div>
@@ -2698,7 +2785,7 @@
             <div class="product-actions">
                 <button class="details-btn">Ficha Técnica</button>
                 <a href="SDS/SDS_tfro220.pdf" class="contact-btn" target="_blank" rel="noopener noreferrer">
-                    <i>Hoja de seguridad</i>
+                    <i>SDS</i>
                 </a>
             </div>
         </div>
@@ -2720,7 +2807,7 @@
             <div class="product-actions">
                 <button class="details-btn">Ficha Técnica</button>
                 <a href="SDS/SDS_ptherm.pdf" class="contact-btn" target="_blank" rel="noopener noreferrer">
-                    <i>Hoja de seguridad</i>
+                    <i>SDS</i>
                 </a>
             </div>
         </div>
@@ -2742,7 +2829,7 @@
             <div class="product-actions">
                 <button class="details-btn">Ficha Técnica</button>
                 <a href="SDS/SDS_ptherm.pdf" class="contact-btn" target="_blank" rel="noopener noreferrer">
-                    <i>Hoja de seguridad</i>
+                    <i>SDS</i>
                 </a>
             </div>
         </div>
@@ -2766,7 +2853,7 @@
             <div class="product-actions">
                 <button class="details-btn">Ficha Técnica</button>
                 <a href="SDS/SDS_calaf.pdf" class="contact-btn" target="_blank" rel="noopener noreferrer">
-                    <i>Hoja de seguridad</i>
+                    <i>SDS</i>
                 </a>
             </div>
         </div>
@@ -2788,7 +2875,7 @@
             <div class="product-actions">
                 <button class="details-btn">Ficha Técnica</button>
                 <a href="SDS/SDS_calhtf.pdf" class="contact-btn" target="_blank" rel="noopener noreferrer">
-                    <i>Hoja de seguridad</i>
+                    <i>SDS</i>
                 </a>
             </div>
         </div>
@@ -2810,7 +2897,7 @@
             <div class="product-actions">
                 <button class="details-btn">Ficha Técnica</button>
                 <a href="SDS/SDS_calclnf.pdf" class="contact-btn" target="_blank" rel="noopener noreferrer">
-                    <i>Hoja de seguridad</i>
+                    <i>SDS</i>
                 </a>
             </div>
         </div>
@@ -2832,7 +2919,7 @@
             <div class="product-actions">
                 <button class="details-btn">Ficha Técnica</button>
                 <a href="SDS/SDS_SDS_lumdi.pdf" class="contact-btn" target="_blank" rel="noopener noreferrer">
-                    <i>Hoja de seguridad</i>
+                    <i>SDS</i>
                 </a>
             </div>
         </div>
@@ -2854,7 +2941,7 @@
             <div class="product-actions">
                 <button class="details-btn">Ficha Técnica</button>
                 <a href="SDS/SDS_SDS_lumtri.pdf" class="contact-btn" target="_blank" rel="noopener noreferrer">
-                    <i>Hoja de seguridad</i>
+                    <i>SDS</i>
                 </a>
             </div>
         </div>
@@ -2876,7 +2963,7 @@
             <div class="product-actions">
                 <button class="details-btn">Ficha Técnica</button>
                 <a href="SDS/SDS_SDS_lumtri.pdf" class="contact-btn" target="_blank" rel="noopener noreferrer">
-                    <i>Hoja de seguridad</i>
+                    <i>SDS</i>
                 </a>
             </div>
         </div>
@@ -2898,25 +2985,39 @@
             <div class="product-actions">
                 <button class="details-btn">Ficha Técnica</button>
                 <a href="SDS/SDS_SDS_pht100.pdf" class="contact-btn" target="_blank" rel="noopener noreferrer">
-                    <i>Hoja de seguridad</i>
+                    <i>SDS</i>
                 </a>
             </div>
         </div>
     </div>
+
     
     <!--pagina 13-->
 
 
-
+   
+    <div class="pagination-container">
+        <button class="page-button active">1</button>
+        <button class="page-button">2</button>
+        <button class="page-button">3</button>
+        <button class="page-button">4</button>
+        <button class="page-button">5</button>
+        <button class="page-button">6</button>
+        <button class="page-button">7</button>
+        <button class="page-button">8</button>
+        <button class="page-button">9</button>
+        <button class="page-button">10</button>
+        <button class="page-button">11</button>
+        <button class="page-button">12</button>
+        <button class="page-button">13</button>
+    </div>                
+</div>
 
             <!-- End of card block -->
             <!-- Repeat the above card block 11 more times -->
         </div>
 
-        <div class="fixed-section">
-           <p style="color: #6b6b6b;">La Ficha Técnica se mostrará aquí</p>
-        </div>
-    </div>
+
 
 <script>
         function toggleText(id) {
@@ -2936,6 +3037,281 @@
         }
     }
 </script>
+
+<script>
+    // Array de todos los productos
+    const products = [
+        "PETRO CANADA SUPREME 20W-50 12X1L CASE",
+        "PETRO CANADA SUPREME 2OW-50 4X4L CASE",
+        "PETRO CANADA SUPREME 20W-50 205L DRUM",
+        "SUPREME SYNTHETIC 5W-20 205 L DRM",
+        "SUPREME SYNTHETIC 5W-30 205 L DRM",
+        "PETRO-CANADA ATF D3M 12X1L CASE",
+        "DEXRON VI ATF 12X1L CASE",
+        "DURADRIVE MV SYNTHETIC ATF 12X1L CASE",
+        "PC HEAVY DUTY SYNTHETIC BLEND ATF 20L P",
+        "DURADRIVE HD SYNTHETIC 668 20 L PAIL",
+
+        "DURON HP 15W-40 19 L PAIL",
+        "DURON HP 15W-40 205 L DRUM",
+        "DURON HP 15W-40 1040 L IBC",
+
+        "DURON SHP 10W-30 205 L DRUM",
+        "DURON SHP 15W-40 205 L DRUM",
+
+        "DURON UHP 0W-30 205 L DRM",
+        "DURON UHP 10W-40 205 L DRM",
+
+        "DURON GEO LD 15W-40 205 L DRUM",
+        "DURON GEO LD 15W-40 1,040 L IBC",
+
+        "TRAXON 80W-90 20 L PAIL",
+        "TRAXON 80W-90 205L DRUM",
+        "TRAXON 85W-140 20 L PAIL",
+        "TRAXON 85W-140 205L DRUM",
+        "TRAXON SYNTHETIC 75W-90 20L PAIL",
+        "TRAXON SYNTHETIC 75W-90 205L DRUM",
+
+        "DURATRAN 20L PAIL",
+        "PRODURO TO-4+ 10W TRANSMISSION OIL",
+        "PRODURO TO-4+ 10W TRANSMISSION OIL 205L",
+        "PRODURO TO-4+ 30 TRANS OIL 20L PAIL",
+        "PRODURO TO-4+ 50 TRANSMISSION OIL 20L",
+
+        "HD EXPERT PREMIUM 50/50 ANTIFREEZE 208 L",
+
+        "SENTRON CG 40 205 L DRUM",
+        "SENTRON LD 5000 205 L DRUM",
+        "SENTRON LD 5000 1040L IBC",
+        "SENTRON LD 8000 205 L DRUM",
+
+        "HYDREX AW 32 HYDRAULIC OIL 20L PAIL",
+        "HYDREX AW 32 HYDRAULIC OIL 205L DRUM",
+        "HYDREX AW 46 HYDRAULIC OIL 20L PAIL",
+        "HYDREX AW 46 HYDRAULIC OIL 205L DRUM",
+        "HYDREX AW 68 HYDRAULIC OIL 20L PAIL",
+        "HYDREX AW 68 HYDRAULIC OIL 205L DRUM",
+        "HYDREX AW 100 HYDRAULIC OIL 205L DRUM",
+        "HYDREX MV 32 HYDRAULIC OIL 205L DRUM",
+        "HYDREX MV 32 HYDRAULIC OIL 1,040 L IBC",
+        "HYDREX MV 46 HYDRAULIC OIL 205L DRUM",
+        "HYDREX MV 46 HYDRAULIC OIL 1040 IBC",
+        "HYDREX EXTREME HYDRAULIC OIL 205 L DRUM",
+        "HYDREX MV ARTIC 15 HYDRAULIC OIL 205 L DRUM",
+        "ENVIRON AW 46 HYDRAULIC OIL 205 L DRUM",
+        "ENVIRON MV 46 HYDRAULIC OIL 20 L PAIL",
+        "ENVIRON MV 46 HYDRAULIC OIL 205 L DRUM",
+
+        "PRECISION GENERAL PURPOSE EP2 175KG DRUM",
+
+        "PRECISION XL EP 000 17 KG PAIL",
+        "PRECISION XL EP 00 17 KG PAIL",
+        "PRECISION XL EP 2 30X400G TUBES CASE",
+        "PRECISION XL EP 2 17 KG PAIL",
+        "PRECISION XL 3 MOLY EP2 30X400G TUBES",
+        "PRECISION XL 3 MOLY EP2 17 KG PAIL",
+
+        "PRECISION SYNTHETIC EMB 30X400G TUBES",
+        "PRECISION SYNTHETIC 30 X 400 G TUBES",
+        "PRECISION SYNTHETIC 17 KG PAIL",
+        "PRECISION SYNTHETIC 220 17 KG PAIL",
+        "PRECISION SYNTHETIC 220 175 KG DRUM",
+
+        "PEERLESS OG1 GRASA 400G",
+        "PEERLESS OG2 30X400G TUBES CASE",
+        "PEERLESS OG PLUS 30X400G TUBES CASE",
+        "PEERLESS OG PLUS 54 KG LINED KEG",
+        "PEERLESS XCG-FLEX 30X400G TUBES CASE",
+        "PEERLESS LLG 30X400G TUBES CASE",
+        "PEERLESS LLG 17 KG PAIL",
+        "PEERLESS LLG 175 KG DRUM",
+        "PEERLESS POLY EMB 30X400G TUBES CASE",
+        "THERMEX 30 X 400 G TUBES CASE",
+
+        "VULTREX MPG EP2 30X400G TUBES CASE",
+        "VULTREX MPG EP2 17 KG PAIL",
+
+        "COMPRO XL-S COMPRESSOR FLUID 46 20 L",
+        "COMPRO XL-S COMPRESSOR FLUID 68 20 L",
+        "COMPRO XL-S COMPRESSOR FLUID 100 20L (T)",
+        "COMPRO SYN COMPRESSOR FLUID 5 USG PAIL",
+
+        "PC COMPRESSOR CLEANER 1 L",
+        "PC COMPRESSOR CLEANER 20L PAIL",
+
+        "RELFO 68A AMMONIA OIL 205 L DRUM",
+
+        "SUPER VAC FLUID 20 20L PAIL",
+
+        "ENDURATEX EP 68 205 L DRUM",
+        "ENDURATEX EP 100 20 L PAIL",
+        "ENDURATEX EP 150 20 L PAIL",
+        "ENDURATEX EP 150 205 L DRUM",
+        "ENDURATEX EP 220 20 L PAIL",
+        "ENDURATEX EP 220 205 L DRUM",
+        "ENDURATEX EP 320 20 L PAIL",
+        "ENDURATEX EP 320 205 L DRUM",
+        "ENDURATEX EP 460 20 L PAIL",
+        "ENDURATEX EP 460 205 L DRUM",
+        "ENDURATEX EP 680 20 L PAIL",
+        "ENDURATEX EP 680 205 L DRUM",
+        "ENDURATEX XL 68/220 20  L PAIL",
+        "ENDURATEX XL 68/220 205 L DRUM",
+        "ENDURATEX SYNTHETIC EP 150 20 L PAIL",
+        "ENDURATEX SYNTHETIC EP 220 205 L DRUM",
+        "ENDURATEX SYNTHETIC EP 320 20 L PAIL",
+        "ENDURATEX SYNTHETIC EP 320 205 L DRUM",
+        "ENDURATEX SYNTHETIC EP 460 20 L PAIL",
+        "ENDURATEX SYNTHETIC EP 460 205 L DRUM",
+
+        "SYNDURO SHB 46 20L PAIL",
+        "SYNDURO SHB 150 205 DRM",
+        "SYNDURO SHB 220 20L PAIL",
+        "SYNDURO SHB 220 205 DRM",
+
+        "ACCUFLO TK 68 20L PAIL",
+        "METWORX NEATCUT 32 CF 205 L DRUM",
+
+        "DURATAC CHAIN OIL 150 20 L PAIL",
+
+        "PURITY FG AW HYDRAULIC FLUID 46 20 L PAIL",
+        "PURITY FG AW HYDRAULIC FLUID 68 20 L PAIL",
+        "PURITY FG CHAIN FLUID LIGHT 20 L PAIL",
+        "PURITY FG CHAIN FLUID HEAVY 20 L PAIL",
+        "PURITY FG EP GEAR FLUID 100 20 L PAIL",
+        "PURITY FG EP GEAR FLUID 220 20 L PAIL",
+        "PURITY FG EP GEAR FLUID 320 20 L PAIL",
+        "PURITY FG 1 GREASE 30X400 TUBES",
+        "PURITY FG2 CLEAR 30X400G TUBES",
+        "PURITY FG2 CLEAR 17 KG PAIL",
+        "PURITY FG2 SYNTHETIC 30X400G TUBES",
+        "PURITY FG HEAT TRANSFER FLUID 20 L PAIL",
+        "PURITY FG HEAT TRANSFER FLUID 205 L DRUM",
+        "PURITY FG SPRAY 12X290G AEROSOL CANS",
+        "PURITY FG PENETRATING OIL SPRAY 12 X 355 ML",
+        "PURITY FG WO WHITE OIL 15 20L PAIL",
+        "PURITY FG WO WHITE OIL 15 205L DRUM",
+        "PURITY FG WO WHITE OIL 68 20L PAIL",
+        "PURITY FG SYNTHETIC BARRIER FLUID 5 205 L DRUM",
+
+        "TURBOFLO XL 32 205 L DRUM",
+        "TURBOFLO XL 46 205 L DRUM",
+        "TURBOFLO XL 68 20 L PAIL",
+        "TURBOFLO XL 68 205 L DRUM",
+        "TURBOFLO R&O 10 20 L PAIL",
+        "TURBOFLO R&O 150 205 L DRUM",
+        "TURBOFLO R&O 220 20 L PAIL",
+        "TURBOFLO R&O 220 205 L DRUM",
+
+        "PETRO-THERM 205 L DRUM",
+        "PETRO-THERM 1,040 L IBC",
+        "CAFLO AF 205 L DRM",
+        "CAFLO HTF 205 L DRM",
+        "CALFLO CLEANING FLUID 205 L DRUM",
+        "LUMINOIL DI 205 L DRUM PROLEC",
+        "LUMINOIL TRI 205 L DRUM EXPORT",
+        "LUMINOIL TRI 1,040 L IBC PROLEC",
+        "PARAFLEX HT 100 205 L DRM",
+        "AEROSHELL 560 208.1 L",
+
+
+
+    ];
+
+    const searchBar = document.querySelector('.search-bar');
+    const cardSection = document.querySelector('.card-section');
+    const pageButtons = document.querySelectorAll('.page-button');
+    const itemsPerPage = 9;
+
+    function matchesSearch(productName, searchQuery) {
+        return productName.toLowerCase().includes(searchQuery.toLowerCase());
+    }
+
+    function updateCardsVisibility(searchQuery) {
+        const productCards = document.querySelectorAll('.product-card');
+        let visibleCards = 0;
+
+        productCards.forEach(card => {
+            const productTitle = card.querySelector('.product-title').textContent;
+            
+            if (searchQuery === '' || matchesSearch(productTitle, searchQuery)) {
+                card.classList.remove('hidden');
+                visibleCards++;
+            } else {
+                card.classList.add('hidden');
+            }
+        });
+
+        updatePagination(visibleCards);
+        showPage(1);
+
+        const noResultsMessage = document.querySelector('.no-results-message') || createNoResultsMessage();
+        if (visibleCards === 0) {
+            noResultsMessage.style.display = 'block';
+        } else {
+            noResultsMessage.style.display = 'none';
+        }
+    }
+
+    function createNoResultsMessage() {
+        const message = document.createElement('div');
+        message.className = 'no-results-message';
+        message.textContent = 'No se encontraron productos que coincidan con tu búsqueda.';
+        cardSection.appendChild(message);
+        return message;
+    }
+
+    function updatePagination(visibleCards) {
+        const totalPages = Math.ceil(visibleCards / itemsPerPage);
+        
+        pageButtons.forEach((button, index) => {
+            if (index < totalPages) {
+                button.style.display = 'block';
+            } else {
+                button.style.display = 'none';
+            }
+        });
+    }
+
+    function showPage(pageNumber) {
+        const visibleCards = Array.from(document.querySelectorAll('.product-card:not(.hidden)'));
+        const startIndex = (pageNumber - 1) * itemsPerPage;
+        const endIndex = startIndex + itemsPerPage;
+
+        visibleCards.forEach((card, index) => {
+            if (index >= startIndex && index < endIndex) {
+                card.style.display = 'block';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+
+        pageButtons.forEach(button => {
+            button.classList.toggle('active', button.textContent === pageNumber.toString());
+        });
+    }
+
+    // Event Listeners
+    searchBar.addEventListener('input', (e) => {
+        const searchQuery = e.target.value.trim();
+        updateCardsVisibility(searchQuery);
+    });
+
+    pageButtons.forEach((button, index) => {
+        button.addEventListener('click', () => {
+            showPage(index + 1);
+        });
+    });
+
+    // Inicializar la página
+    updateCardsVisibility('');
+    showPage(1);
+    
+</script>
+
+
+
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
